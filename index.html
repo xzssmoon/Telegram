@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TG Аккаунты</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>📱 Telegram Аккаунты</h1>
+        <p class="subtitle">Редактируй список в файле <code>data.js</code></p>
+    </header>
+
+    <div class="toolbar">
+        <input type="text" id="search" placeholder="🔍 Поиск по телефону / имени / @юзернейму...">
+
+        <select id="geoFilter">
+            <option value="">Все гео</option>
+        </select>
+
+        <select id="spamFilter">
+            <option value="">Все</option>
+            <option value="clean">✅ Без спамблока</option>
+            <option value="blocked">⛔ Спамблок</option>
+        </select>
+
+        <span class="counter" id="counter">Всего: 0</span>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-check"><input type="checkbox" id="checkAll"></th>
+                    <th class="col-num">#</th>
+                    <th>Телефон</th>
+                    <th>Гео</th>
+                    <th>Спамблок</th>
+                    <th>Отлёжка</th>
+                    <th>Роль</th>
+                    <th>Использован</th>
+                    <th>Имя</th>
+                    <th>Юзернейм</th>
+                    <th class="col-actions">Разное</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>💡 Обновляешь <code>data.js</code> в GitHub → сайт обновляется автоматически</p>
+    </footer>
+
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
